@@ -1,7 +1,11 @@
 package com.babapp.noteapp.View
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -37,4 +41,24 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.new_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+            when(item.itemId){
+                R.id.item_add_note ->{
+                    val intent = Intent(this, NoteAddActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.item_delete_all_notes ->{
+                    Toast.makeText(applicationContext, "Delete icon was clicked" , Toast.LENGTH_SHORT).show()
+                }
+
+            }
+        return true
+    }
+
 }
