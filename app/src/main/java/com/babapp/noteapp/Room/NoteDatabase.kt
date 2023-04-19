@@ -45,9 +45,8 @@ abstract class NoteDatabase :  RoomDatabase(){
                 //database.getNoteDao().insert("t")   -- not allowed
                 scope.launch {
                     val noteDao = database.getNoteDao()
-                    noteDao.insert(Note("Title 1", "Description 1"))
-                    noteDao.insert(Note("Title 2", "Description 2"))
-                    noteDao.insert(Note("Title 3", "Description 3"))
+                    noteDao.insert(Note("Groceries", "Potato, chocos, juice."))
+                    noteDao.insert(Note("Lotus temple", "Lotus temple belongs to Baha'i faith."))
                 }
             }
         }

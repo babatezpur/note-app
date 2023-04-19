@@ -5,6 +5,7 @@ import com.babapp.noteapp.Model.Note
 import com.babapp.noteapp.Room.NoteDAO
 import kotlinx.coroutines.flow.Flow
 
+//Class consisting the basic CRUD ops.
 class NoteRepository(private val noteDao : NoteDAO) {
     val myAllNotes : Flow<List<Note>> = noteDao.getAllNotes()
 

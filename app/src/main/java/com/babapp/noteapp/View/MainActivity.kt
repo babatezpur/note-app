@@ -57,6 +57,8 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+
+        //For when notes are swiped, got two callback functions
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0
         , ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT){
             override fun onMove(
@@ -64,7 +66,8 @@ class MainActivity : AppCompatActivity() {
                 viewHolder: RecyclerView.ViewHolder,
                 target: RecyclerView.ViewHolder
             ): Boolean {
-                TODO("Not yet implemented")
+                //Does Nothing
+                return true
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
@@ -113,6 +116,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    //For when something on the menu bar is selected (clicked)
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
             when(item.itemId){
                 R.id.item_add_note ->{

@@ -26,6 +26,8 @@ class NoteAddActivity : AppCompatActivity() {
         buttonCancel = findViewById(R.id.buttonCancel)
         buttonSave = findViewById(R.id.buttonSave)
 
+
+        //Click listeners for the save and cancel buttons.
         buttonCancel.setOnClickListener{
             Toast.makeText(applicationContext,"Nothing Saved" , Toast.LENGTH_SHORT).show()
             finish()
@@ -34,6 +36,8 @@ class NoteAddActivity : AppCompatActivity() {
             saveNote()
         }
     }
+
+    //Saves the note
     fun saveNote(){
         val noteTitle : String = editTextTitle.text.toString()
         val noteDescription : String = editTextDescription.text.toString()

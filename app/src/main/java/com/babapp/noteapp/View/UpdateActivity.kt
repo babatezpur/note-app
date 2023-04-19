@@ -55,6 +55,8 @@ class UpdateActivity : AppCompatActivity() {
         }
     }
 
+
+    //Prepopulates the field with the original data
     fun getAndSetData(){
 
         //get
